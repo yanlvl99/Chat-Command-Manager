@@ -1,4 +1,4 @@
-# CommandRegistry
+# Chat Command Manager
 
 Um sistema para gerenciar comandos por chat no Roblox.
 

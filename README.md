@@ -6,11 +6,21 @@ Desenvolvido por: yanlvl99_
 
 ## Carregando o Sistema
 
-O CommandRegistry pode ser carregado usando `loadstring` através de um link HTTP:
+O Chat Command Manager pode ser carregado usando `loadstring` através de um link HTTP e tambem atraves de `modulo` no Roblox Studio:
 
+## Exemplo para `loadstring`
 ```lua
 -- Carregar o sistema
-local CommandRegistry = loadstring(game:HttpGet("Meusite.com"))()
+local CommandRegistry = loadstring(game:HttpGet("https://raw.githubusercontent.com/yanlvl99/Chat-Command-Manager/refs/heads/main/source.lua"))()
+local registry = CommandRegistry.new()
+
+```
+
+## Exemplo para modulo
+Copie o conteudo do source e coloque em um module script no roblox studio
+```lua
+-- Carregar o sistema
+local CommandRegistry = require(path.to.module)
 local registry = CommandRegistry.new()
 
 ```

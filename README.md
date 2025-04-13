@@ -1,57 +1,21 @@
 # CommandRegistry
 
-Um sistema robusto e flexível para gerenciar comandos no Roblox.
+Um sistema para gerenciar comandos por chat no Roblox.
 
-Desenvolvido por: yanlvl99
+Desenvolvido por: yanlvl99_
 
 ## Carregando o Sistema
 
 O CommandRegistry pode ser carregado usando `loadstring` através de um link HTTP:
 
 ```lua
--- Carregar o sistema com logs ativados
+-- Carregar o sistema
 local CommandRegistry = loadstring(game:HttpGet("Meusite.com"))()
-local registry = CommandRegistry.new({ log = true })
+local registry = CommandRegistry.new()
 
--- Carregar o sistema sem logs
-local CommandRegistry = loadstring(game:HttpGet("Meusite.com"))()
-local registry = CommandRegistry.new({ log = false })
 ```
 
-## Comandos Disponíveis
-
-### Comando Haki
-
-#### Descrição
-Ativa/desativa o Haki do personagem.
-
-#### Uso
-- `!haki on` - Ativa o Haki
-- `!haki off` - Desativa o Haki
-- `!h on` - Ativa o Haki (alias)
-- `!hk off` - Desativa o Haki (alias)
-
-#### Exemplo
-```lua
-local Haki = registry:RegisterCommand("haki", {
-    handler = function(player, args)
-        local state = args[1]
-        if state then
-            -- Lógica para ativar Haki
-            return true
-        end
-        return false
-    end,
-    description = "Ativa/desativa o Haki",
-    prefix = "!",
-    log = true, -- Ativa logs para este comando
-    enabled = true
-})
-
-Haki:AddArgType("state", "boolean")
-Haki:AddAlias("h", "haki", "hk")
-```
-
+## Exemplos de Comandos
 ### Comando Speed (Velocidade)
 
 #### Descrição
@@ -313,12 +277,6 @@ O sistema inclui logs detalhados que aparecem no console, mas podem ser configur
 - Gerenciamento de argumentos
 - Configurações personalizadas por comando
 - Sistema de logs granular (por comando e por registro)
-
-## Requisitos
-
-- Roblox Studio
-- Serviço de Chat habilitado
-- LocalPlayer pronto
 
 ## Suporte
 
